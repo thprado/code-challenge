@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <input id="search" [(ngModel)]="search" (ngModelChange)="onChange($event)" autocomplete="off" type="text"
+      (keyup)="handleKeyUp($event)" placeholder="Digite o nome do filme" class="font-input-size" autofocus />
+    <div id="result-message">
+      <span class="font-input-size" *ngIf="showResults">{{ totalResults }} resultados para ´{{ search }}´</span>
+      <span class="font-input-size" *ngIf="!showResults">Não há resultados</span>
+    </div>
+  </div>
+
+  <div id="results" class="row">
+    <app-movie-card *ngFor="let movie of movies" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" [movie]="movie"
+      (movieSelected)="showMovieInfo($event)">
+    </app-movie-card>
+  </div>
+</div>

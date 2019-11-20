@@ -1,0 +1,47 @@
+$input-color: #8a8a8a;
+$text-color: #dadada;
+
+@media (min-width: 576px) {
+  .font-input-size {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .font-input-size {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .font-input-size {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1450px) {
+  .font-input-size {
+    font-size: 2.2rem;
+  }
+}
+
+// Estilizando o input default do HMTL
+#search {
+  background-color: transparent;
+  border-style: none none solid none;
+  border-bottom-color: $input-color;
+  color: $input-color;
+  outline: none;
+  width: 100%;
+  padding-bottom: 5px;
+  margin: 10px 15px;
+
+  &::placeholder {
+    padding-left: 10px;
+  }
+}
+
+#result-message {
+  color: $text-color;
+  margin: 10px 15px;
+}

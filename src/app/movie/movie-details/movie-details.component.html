@@ -1,0 +1,26 @@
+<div class="container">
+    <div id="details" *ngIf="movie; else loading">
+        <img id="image" [src]="movie?.Poster">
+        <div class="text-color ml-4">
+            <h1 id="title">{{ movie?.Title }} ({{ movie?.Year }})</h1>
+            <p>{{ movie?.Runtime }} - {{ movie?.Genre }}</p>
+            <p>{{ movie?.Plot }}</p>
+            <p>
+                <b>Atores:</b> {{ movie?.Actors }}
+                <br>
+                <b>Diretores:</b> {{ movie?.Director }}
+            </p>
+            <p><b>Idioma Original:</b> {{ movie?.Language }}</p>
+
+            <div *ngFor="let Rating of movie?.Ratings">
+                <b>{{ Rating?.Source }}:</b> {{ Rating?.Value }}
+                <br>
+            </div>
+            <br>
+            <button type="button" (click)="goToMovies()" autofocus class="btn btn-secondary">Nova Busca</button>
+        </div>
+    </div>
+    <ng-template #loading>
+        <span class="mt-4 text-color">Carregando...</span>
+    </ng-template>
+</div>
