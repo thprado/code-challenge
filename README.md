@@ -1,27 +1,43 @@
-# CodeChallenge
+# Code-Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
+## Pré-requisitos
 
-## Development server
+- [NodeJS](https://nodejs.org/en/download/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Após o download do NodeJS precisamos instalar algumas dependências globalmente, então use os seguintes comandos: 
 
-## Code scaffolding
+```
+npm i -g @angular/cli
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação
 
-## Build
+Inicialmente, precisamos realizar o download do projeto.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+https://github.com/thprado/code-challenge.git
+```
 
-## Running unit tests
+Após o download do projeto, precisamos instalar as dependências do mesmo, vá até o diretório raiz do projeto e execute o comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm install
+```
 
-## Running end-to-end tests
+Após os passos anteriores estarem concluídos, podemos iniciar a nossa aplicação.
+Vá até o diretório raiz do projeto e digite o comando:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+npm start
+```
 
-## Further help
+O Serviço estará disponível na porta 4200.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+http://localhost:4200/#/
+
+
+Para iniciar os testes, use o comando:
+
+```
+npm run test
+```
